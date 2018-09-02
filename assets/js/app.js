@@ -30,7 +30,7 @@ ui.modalContent.addEventListener('click', e => {
     ui.loadingAddMovie()
     ui.getMovieId(e.target, openMovieDB.currentSearch)
       .then(id => openMovieDB.getMovieById(id))
-      .then(movieData => userMovieDB.postMovie(movieData))
+      // .then(movieData => userMovieDB.postMovie(movieData))
       .then(res => ui.addMovie(res))
       .catch(err => {
         console.log(err + ' linea 28 app.js')
@@ -56,9 +56,9 @@ ui.movieGrid.addEventListener('click', e => {
     }
     if (ui.removeMovie(selectedMovie, confirmMsg)) {
       if (methodDelete) {
-        userMovieDB.deleteMovie(selectedMovie)
+        // userMovieDB.deleteMovie(selectedMovie)
       } else {
-        userMovieDB.watchedMovie(selectedMovie)
+        // userMovieDB.watchedMovie(selectedMovie)
       }
       ui.showAlert(alertMsg, 'info')
     }

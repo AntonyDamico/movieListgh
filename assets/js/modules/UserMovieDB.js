@@ -1,6 +1,6 @@
 class UserMovieDB {
   constructor() {
-    this.url = '//localhost:8000/movies/'
+    this.url = 'https//localhost:8000/movies/'
   }
 
   async getMovies() {
